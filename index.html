@@ -1,0 +1,61 @@
+<!--
+	Name:		index.html
+	Author:		Seamus nugent
+	Date:		12/02/2016 
+	Purpose:	Top level page of Assignment
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- The meta below Fixes issues with old IE versions using jquery 2.x
+		See The link below for further details.
+		https://forum.jquery.com/topic/jquery-2-1-1-min-js-object-doesn-t-support-property-or-method-addeventlistener
+	 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;" />	<link rel="stylesheet" type="text/css" href="css/mainlayout.css">
+	<script type="text/javascript" src="jquery/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	
+</head>
+<body>
+	<div id="Container" >
+		<div id="LogoSection">
+			<form name="headerForm" id="headerForm">
+				<table id="logoTable">
+				<tr>
+					<td width="64%">
+						<a id="achLogo" href="index.html"><img src="jpg/logo.jpg"></a>
+					</td>
+					<td width="9%">
+						<input type="text" 	   id="txtTopUsrId" 	class="txtMedium"	 	placeholder="User Id" />
+					</td>
+					<td width="9%">
+						<input type="password" id="txtTopPassword" 	class="txtMedium"	placeholder="Password" />
+					</td>
+					<td width="9%">
+						<input type="button"   id="btnTopLogin" 	class="buttonMedium buttonDisabled" value="Login" disabled  onclick="login(document.getElementById('txtTopUsrId').value, document.getElementById('txtTopPassword').value, 'Top')" >
+					</td>		
+					<td width="9%">
+						<input type="button"   id="btnTopRegister" 	class="buttonMedium" value="Register" onclick="register()" >
+					</td>			
+				</tr>
+				</table>
+			</form>
+		</div>
+		<div id="MapSection"><p id="MapText" class="SmallText" id="MapPath">Home</p></div>
+		<div id="MenuSection">
+			<ul id="MenuBar">
+				<li><a id="HomeMenu" 		class="StandardText" href="html/home.html" onclick="return callPage(this.href, this.innerText, 'Level1');">Home</a></li>
+				<li><a id="LoginMenu" 		class="StandardText" href="html/login.html" onclick="return callPage(this.href, this.innerText, 'Level1');">Login</a></li>
+				<li><a id="AccountMenu"		class="StandardText" href="html/account.html" onclick="return callPage(this.href, this.innerText, 'Level1');">Account</a></li>
+				<li><a id="CatalogueMenu" 	class="StandardText" href="html/catalogue.html" onclick="return callPage(this.href, this.innerText, 'Level1');">Catalogue</a></li>
+				<li><a id="ContactMenu"		class="StandardText" href="html/contact.html" onclick="return callPage(this.href, this.innerText, 'Level1');">Contact Us</a></li>
+				<li><a id="LogoutMenu" 		class="StandardText" href="html/logout.html" >Logout</a></li>
+			</ul> 
+		</div>
+		<div id="PageContent">
+		</div>
+	</div>
+</body>
+</html>

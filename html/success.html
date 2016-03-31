@@ -1,0 +1,43 @@
+<!--
+	Name:		success.html
+	Author:		Seamus nugent
+	Date:		25/03/2016 
+	Purpose:	Register success confirmation page
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<!-- The meta below Fixes issues with old IE versions using jquery 2.x
+		See The link below for further details.
+		https://forum.jquery.com/topic/jquery-2-1-1-min-js-object-doesn-t-support-property-or-method-addeventlistener
+	 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+	
+	<link rel="stylesheet" type="text/css" href="../css/mainlayout.css">
+	<script type="text/javascript" src="../jquery/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/logout.js"></script>
+</head>
+<body>
+	<div id="Container" >
+		<div id="LogoSection">
+			<form id="headerForm" name="headerForm" >
+				<table id="logoTable">
+				<tr>
+					<td width="90%">
+						<a id="achLogo" href="../index.html"><img src="../jpg/logo.jpg"></a>
+					</td>
+					<td width="10%">
+						<input type="button" id="btnTopLogin" class="buttonMedium" value="Login" onclick="location.href='../index.html?p=login'" >
+					</td>				
+				</tr>
+				</table>
+			</form>
+		</div>
+		<div id="PageContent">
+			<h1>Your details have been succesfully added.  You are now logged in </h1>
+		</div>
+	</div>
+</body>
+</html>

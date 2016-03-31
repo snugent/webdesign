@@ -1,0 +1,148 @@
+<!--
+	Name:		register2.html
+	Author:		Seamus nugent
+	Date:		25/03/2016 
+	Purpose:	Allows the user to register their details Part 2
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/mainlayout.css">
+	<script type="text/javascript" src="jquery/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="js/register2.js"></script>
+</head>
+<body>
+	<form id="mainForm" name="mainForm">
+		<table id="headingTable" class="headingTable">
+			<tr>
+				<td>
+					<input type="button"   class="headingButton buttonMedium buttonDisabled" value="Login"  disabled>
+				</td>		
+				<td>
+					<input type="button"   class="headingButton buttonMedium " value="Details" disabled >
+				</td>	
+				<td>		
+					<input type="button"   class="headingButton buttonMedium buttonDisabled" value="Confirm" disabled >
+				</td>
+			</tr>
+			<tr>
+				<td colspan=3>
+					<!-- Main Details -->
+					<table id="mainTable" class="formTable">
+						<tr id="errorNameRow" class="errorRow">
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" id="nameError" class="txtLabel txtError" disabled value=""/>
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" class="txtLabel" disabled value="Name"/>
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" id="txtName"    class="txtMediumLong" placeholder="Name" />
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						
+						<tr id="errorEmaiRow" class="errorRow">
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" id="emailError" class="txtLabel txtError" disabled value=""/>
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" class="txtLabel" disabled value="email" />
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="email" id="txtEmail" 	class="txtMedium" placeholder="Email" />
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						
+						
+						<tr id="errorPhonRow" class="errorRow">
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" id="phoneError" class="txtLabel txtError" disabled value=""/>
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" class="txtLabel" disabled value="Phone" />
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<input type="text" id="txtPhone"  	class="txtMedium" placeholder="Confirm Password" />
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan=3 class="center">
+								<input type="button"   id="btnBack"    class="buttonMedium"	value="< Back" onclick="goBack()" >
+								<input type="button"   id="btnNext"    class="buttonMedium buttonDisabled"	value="Next >" onclick="goNext();" >
+							</td>
+						</tr>
+					</table>				
+				</td>
+			</tr>			
+		</table>	
+	</form>
+</body>
+</html>

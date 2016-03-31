@@ -1,0 +1,50 @@
+<!--
+	Name:		loutout.html
+	Author:		Seamus nugent
+	Date:		20/03/2016 
+	Purpose:	Top level page of Assignment
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/mainlayout.css">
+	<script type="text/javascript" src="jquery/jquery-2.2.2.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+	<form id="mainForm" name="mainForm">
+		<table id="loginTable">
+			<tr>
+				<td>Login</td>
+			</tr>
+			<tr id="errorRow" class="errorRow">
+				<td>
+					<input type="text" id="txtErrorMsg" class="txtError txtLabelLarge" disabled value=""/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text"     id="txtUsrId"    class="txtLarge" placeholder="User Id" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="password" id="txtPassword" class="txtLarge" placeholder="Password" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button"   id="btnLogin"    class="buttonLarge buttonDisabled"	value="Login" disabled  
+						   onclick="login(document.getElementById('txtUsrId').value, document.getElementById('txtPassword').value)" >
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./html/register.html" onclick="return callPage(this.href, this.innerText, 'Level1');">Register</a> 
+				</td>
+			</tr>			
+		</table>
+	</form>
+</body>
+</html>

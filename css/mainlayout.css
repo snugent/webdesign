@@ -1,0 +1,422 @@
+/* 
+Name:		mainlayout.css
+Author:		Seamus nugent
+Date:		12/02/2016
+Purpose:	Holds the main CSS scripts for program.
+*/
+/* Standard HTML Items*/
+img{
+	border:				0px;
+}
+
+h1{
+	font-family:		Times New Roman;
+	font-size:			17pt;
+}
+
+h2{
+	font-family:		Times New Roman;
+	font-size:			14pt;
+}
+table{
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	border-spacing:		0px;
+	padding:			0px;
+    border-collapse: 	collapse;
+    width:				100%;
+}
+a{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+}
+th{
+	text-align: 		left;
+	font-weight:		bold;
+}
+
+label{
+	text-align: 		left;
+}
+/* Class Elements*/
+.StandardText{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+}
+.SmallText{
+	font-family: 		Time New Roman;
+	font-size:  		8pt;
+}
+.MediumText{
+	font-family: 		Time New Roman;
+	font-size:  		10pt;
+}
+
+.invisible{
+	display:			none;
+}
+.buttonDisabled{
+		opacity: 			0.5;
+}
+.blank_row
+{
+    height: 12px; 
+    background-color: #FFFFFF;
+}
+.buttonLarge{
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	height:				40px;
+	width:				200px;
+	background-color:   #1F497D;
+	color:   			#DBE5F1;
+}
+.buttonLarge.enabled:hover {
+    color: 				#1F497D; /* Dark Blue*/
+    background-color:	#DBE5F1; /* Light Blue*/
+}
+.buttonMedium{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	height:				25px;
+	width:				90px;
+	background-color:   #1F497D;
+	color:   			#DBE5F1;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;	
+}
+.buttonMedium.enabled:hover {
+    color: 				#1F497D; /* Dark Blue*/
+    background-color:	#DBE5F1; /* Light Blue*/
+}
+.headingButton{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	height:				25px;
+	width:				90px;
+	background-color:   #DBE5F1;
+	color:   			#1F497D;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;	
+}
+.txtMedium{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	height: 			25px;
+	width:				225px;
+	max-length:			30;
+	border-top:			1px solid black; 
+	border-left:		1px solid black; 
+	border-right:		1px solid black; 
+	border-bottom:		1px solid black; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+
+}
+.txtMediumLong{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	height: 			25px;
+	width:				225px;
+	max-length:			60;
+	border-top:			1px solid black; 
+	border-left:		1px solid black; 
+	border-right:		1px solid black; 
+	border-bottom:		1px solid black; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+
+}
+.txtLarge {
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	height:				40px;
+	width:				200px;
+	border-top:			1px solid black; 
+	border-left:		1px solid black; 
+	border-right:		1px solid black; 
+	border-bottom:		1px solid black; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+}
+.labelMedium{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;	
+}
+.labelLarge{
+	font-family: 		Time New Roman;
+	font-size:  		21pt;	
+}
+.txtLabel {
+	height: 			25px;
+	width:				225px;
+	max-length:			30;
+	border-top:			0px ; 
+	border-left:		0px ; 
+	border-right:		0px ; 
+	border-bottom:		0px ; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+	background-color:	#FFFFFF;
+	color:				#000000;
+}
+.txtLabelLarge {
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	height:				40px;
+	width:				200px;
+	border-top:			0px ; 
+	border-left:		0px ; 
+	border-right:		0px ; 
+	border-bottom:		0px ; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+	background-color:	#FFFFFF;
+	color:				#000000;
+}
+
+.txtError{
+	text-algin:			left;
+	color:				#FF0000; /* Red*/
+}
+
+.formTable{
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	text-align:			left;
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			1px solid black; 
+	border-left:		1px solid black;
+	border-right:		1px solid black;
+	border-bottom:		1px solid black;
+	border-collapse:	collapse;
+	padding:			0px;
+    width:				312px;
+}
+
+.formTableLarge{
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	text-align:			center;
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			1px solid black; 
+	border-left:		1px solid black;
+	border-right:		1px solid black;
+	border-bottom:		1px solid black;
+	border-collapse:	collapse;
+}
+.th2{
+	background-color:   #1F497D;
+	color:   			#DBE5F1;
+	
+}
+.headingTable {
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	text-align: 		center;
+	margin:				32px 0px 0px 142px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	border-collapse:	collapse;
+	padding:			5px;
+    width:				312px;
+}
+table.headingTableLarge, td.headingTableLarge{
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	text-align: 		center;
+	margin:				32px 0px 0px 142px;
+	border-top:			1px; 
+	border-left:		1px;
+	border-right:		1px;
+	border-bottom:		1px;
+    width:				500px;
+    padding:			50px;
+}
+
+.errorRow{
+	display: 			none;
+}
+.spacer{
+	width: 				5%;
+}
+.spacer2{
+	width: 				10%;
+}
+.center{
+	text-align: center;
+}
+/* Specific elements with ID specified*/
+#Container {
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	padding:			0px, 0px, 0px, 0px;
+}
+#LogoSection {
+	height: 			33px;
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	padding:			0px, 0px, 0px, 0px;
+
+	width:				100%;
+	background-color:	#DBE5F1; /* Light Blue*/
+}
+#MapSection{
+	height:				26px;
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	padding:			5px 0px 5px 0px;
+}
+#MenuSection {
+	height:				40px;
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	padding:			0px, 0px, 0px, 0px;
+	width:				100%;
+	background-color:   #1F497D; /* Dark Blue*/
+}
+
+ul#MenuBar{
+	margin:				0px, 0px, 0px, 0px;
+	border :			0px 0px 0px 0px;
+	padding:			11px 0px 11px 0px;
+}
+ul#MenuBar li {
+	display: 			inline;
+}
+ul#MenuBar li a{
+	background-color:   #1F497D;
+	color:   			#DBE5F1;
+	margin:				0px, 0px, 0px, 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	border-radius:		4px 4px 4px 4px;
+	padding:			10px 10px 10px 10px;
+	text-decoration:	none;
+}
+ul#MenuBar li a:hover {
+    color: 				#1F497D; /* Dark Blue*/
+    background-color:	#DBE5F1; /* Light Blue*/
+}
+#MapText {
+	margin:				7px 0px 7px 0px;
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+	padding:			0px, 0px, 0px, 0px;
+	
+}
+
+
+
+/* Menu items initial status*/
+#HomeMenu{
+	
+}
+#LoginMenu{
+	
+}
+#AccountMenu{
+	display: 	none;
+}
+#CatalogueMenu{
+	
+}
+#ContactMenu{
+	
+}
+#LogoutMenu{
+	display: 	none;
+}
+
+/* Header Login Fields Initial status*/
+#txtTopUsrId{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	height: 			25px;
+	width:				90px;
+	max-length:			30;
+	border-top:			1px solid black; 
+	border-left:		1px solid black; 
+	border-right:		1px solid black; 
+	border-bottom:		1px solid black; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+
+
+}
+#txtTopPassword{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	height:				25px;
+	width:				90px;
+	max-length:			30;
+	border-top:			1px solid black; 
+	border-left:		1px solid black; 
+	border-right:		1px solid black; 
+	border-bottom:		1px solid black; 
+	margin:				0px, 0px, 0px, 0px;
+	padding:			0px, 0px, 0px, 0px;
+}
+btnTopLogin{
+	
+}
+
+#achLogo{
+	border-top:			0px; 
+	border-left:		0px;
+	border-right:		0px;
+	border-bottom:		0px;
+}
+/* Login form defaults*/
+#loginTable {
+	font-family: 		Time New Roman;
+	font-size:  		21pt;
+	text-align: 		center;
+	margin:				132px 0px 0px 142px;
+	border-top:			1px solid black; 
+	border-left:		1px solid black;
+	border-right:		1px solid black;
+	border-bottom:		1px solid black;
+	border-collapse:	collapse;
+	padding:			5px;
+    width:				312px;
+    height:				241px;
+}
+#tableList{
+	font-family: 		Time New Roman;
+	font-size:  		12pt;
+	text-align:			left;
+	margin:				0px, 0px, 0px, 0px;
+	border:				1px solid black;
+	border-collapse:	collapse; 
+	padding:			0px;
+    width:				100%;
+}
+#accountTable{
+	width: 60%;
+}

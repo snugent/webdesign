@@ -1,0 +1,120 @@
+<!-- 
+Author: J.Cullen
+Title: account.html
+Date: 23-04-16
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+ <link rel="stylesheet" type="text/css" href="mainlayout.css">
+ <script type="text/javascript" src="account.js"></script>
+
+  
+    <meta charset="UTF-8">
+	<script type="text/javascript" src="../js/account.js"></script>
+    <title>My Account</title>
+  </head>
+    <h1>Student ID <u>x15035727</u> </h1>
+  <p> <b>Items currently on loan:</b> </p>
+  
+  <body>
+  <table style="width:60%">
+<style>
+th {
+    text-align: left;
+   }
+</style>
+   <th>Author</th>
+   <th>Title</th>
+   <th>Category</th>
+   <th>Return Date</th>
+    <tr>
+     <td>J.Cullen</td>
+     <td>JScript basics</td>		
+     <td>Ebook</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
+	 <td><button type="button" onclick="alert('Item Returned')">Return</button> </td>
+   </tr>
+  <tr>
+     <td>A.ALi</td>
+     <td>Web Design</td>		
+     <td>Book</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
+	 <td><button type="button" onclick="alert('Item Returned')">Return</button> </td>
+  </tr>
+  <tr>
+     <td>Jon</td>
+     <td>Jquery</td>		
+     <td>Journal</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
+	 <td><button type="button" onclick="alert('Item Returned')">Return</button> </td>
+  </tr>
+<tr>
+     <td>J.Johnson</td>
+     <td>Data</td>		
+     <td>Book</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
+	 <td><button type="button" onclick="alert('Item returned')">Return</button> </td>
+  </tr>
+
+<table style="width:60%">
+<style>
+th {
+    text-align: left;
+   }
+</style>
+<br>
+<br>
+<br> 
+<p><b> Reserved Items:</b></p>
+   <table id="myTable">
+   <th>Author</th>
+   <th>Title</th>
+   <th>Category</th>
+   <th>Return Date</th>
+    <tr>
+     <td>J.Cullen</td>
+     <td>JScript basics</td>		
+     <td>Ebook</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button>
+ </td>
+   </tr>
+  <tr>
+     <td>A.ALi</td>
+     <td>Web Design</td>		
+     <td>Book</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button> </td>
+  </tr>
+  <tr>
+     <td>Jon</td>
+     <td>Jquery</td>		
+     <td>Journal</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button> </td>
+  </tr>
+<tr>
+     <td>J.Johnson</td>
+     <td>Data</td>		
+     <td>Book</td>
+     <td>02/12/16</td>
+	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button> </td>
+  </tr>
+</table>
+<p> No items currently overdue. 
+    See our <a href="http://www.w3schools.com/html/">Catalogue </a>to browse other items to add to your account</p>
+  </body>
+</html>
+
+
+<!--account overview page
+This page shows any items borrowed or reserved
+a.  Return Item
+b.  Renew Item
+c.  View Item (Read a book)-->
