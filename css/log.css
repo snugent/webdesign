@@ -1,0 +1,52 @@
+#thCenter {
+    text-align: center;
+}
+#thLeft {
+    text-align: left;
+   }
+#login {
+    height:50;
+	width: 25%;
+    padding: 100px;
+    text-align: center;
+    background-color: white;
+    border: solid 1px black;
+}
+
+
+
+#login2 {
+text align=left;
+border= 2px solid black;
+}
+
+
+#login3 {
+    height:5;
+	width: 80%;
+    padding: 1px;
+    text-align: center;
+    background-color: white;
+    border: solid 1px white;
+}
+
+#outPopUp {
+  position: absolute;
+  width: 50%;
+  height: 200px;
+  z-index: 15;
+  top: 25%;
+  left: 35%;
+  margin: -100px 0 0 -150px;
+  background: red;
+  border: solid 1px black;
+}
+
+#one {
+    border: 1px solid red;
+    background-color: yellow;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
