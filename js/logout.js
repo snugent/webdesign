@@ -20,6 +20,6 @@ function logout(){
 	    } 
 		
 	}
-	setLogin(false);
+	setLogin("false");
 	$("#MapSection").html("");
 }

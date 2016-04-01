@@ -83,7 +83,7 @@ function login(ipUserId, ipPassword, ipSource){
 	}
 
 	if (ipUserId == "student" && ipPassword == "nci2016"){
-		setLogin(true, ipUserId);
+		setLogin("true", ipUserId);
 		if (ipSource = "Screen"){
 			$("#HomeMenu").click();
 		} 
