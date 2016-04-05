@@ -273,6 +273,18 @@ function populateFields(){
 	}
 }
 
+/*
+ * 
+ */
+function populateRadio(ipiRadioName){
+	if (document.getElementById(ipiRadioName) != null){
+		$("#radio input").removeAttr('checked');
+		$("#" + ipiRadioName).attr('checked', true);
+		$("#" + ipiRadioName).click();
+	}		
+}
+
+
 /* 
  * Checks if a Broswer support session storage
  * */
@@ -287,4 +299,48 @@ function sutiableBrowser(){
 		alert("Please update your browswer to a newer version");
 	}	
 	return isValid;
+}
+
+/*
+ * Security check for subscreens.  Subscreens will try and 
+ * call this function.  If they can't find the 
+ * function the will call index.html 
+ */
+function securityCheck(){
+	return true;
+}
+ 
+//This function was done with the assistance of stack overflow questions 3818193
+//Sets a date into the future and returns the date
+function setDate(ipiDaysToAdd){
+	var dToday  = new Date();
+	var dFormat = "";
+	var iDay    = 0;
+	var iMonth  = 0; 
+	var iYear   = 0;
+	// Holds String format of each date element.
+	// We want 01/01/2016 not 1/1/2016
+	var stDay   = "";
+	var stMonth = "";
+	
+	dToday.setDate(dToday.getDate() + ipiDaysToAdd);
+
+	iDay = dToday.getDate();
+	iMonth = (dToday.getMonth() + 1);
+	iYear = dToday.getFullYear();
+	if (iDay < 10){
+		stDay = "0" + iDay;
+	}
+	else {
+		stDay = iDay;
+	}
+
+	if (iMonth < 10){
+		stMonth = "0" + iMonth;
+	}
+	else {
+		stMonth = iMonth;
+	}
+	dFormat =  stDay + "/"  + stMonth+ "/" + iYear;	
+	return dFormat;
 }

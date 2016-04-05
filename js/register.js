@@ -4,55 +4,76 @@ Author:		Seamus Nugent
 Date:		25/03/2016
 Purpose:	
 */
-var hasError = true;
-/* tasks to do after the page loads*/
-$(document).ready(function(){
-	populateFields();
-	enableButton();
-	$("#txtStudentId").focus();
-	$("#txtStudentId").blur(function (e) {
-		checkNumber();
-		checkStudentId();
+//Do initial security check
+// Ignore jquery syntax if the screen doesn't pass security check
+if (initialCheck() == false){
+}
+else {
+	var hasError = true;
+	/* tasks to do after the page loads*/
+	$(document).ready(function(){
+		populateFields();
 		enableButton();
-	});	
+		$("#txtStudentId").focus();
+		$("#txtStudentId").blur(function (e) {
+			checkNumber();
+			checkStudentId();
+			enableButton();
+		});	
 
-	$("#txtStudentId").keyup(function (e) {
-		if(e.which != 9 ) {
-			if (checkNumber() == true){
-				hideError("studentIdError","errorStudRow");	
+		$("#txtStudentId").keyup(function (e) {
+			if(e.which != 9 ) {
+				if (checkNumber() == true){
+					hideError("studentIdError","errorStudRow");	
+				}
+		    }
+			enableButton();
+		});	
+		
+		$("#txtPassword").blur(function (e) {
+			checkPassword();
+			enableButton();
+		});	
+		
+		$("#txtPassword").keyup(function (e) {
+			if(e.which != 9) {
+				if (checkPassword() == true){
+					hideError("passwordError","errorPassRow");	
+				}
 			}
-	    }
-		enableButton();
-	});	
-	
-	$("#txtPassword").blur(function (e) {
-		checkPassword();
-		enableButton();
-	});	
-	
-	$("#txtPassword").keyup(function (e) {
-		if(e.which != 9) {
-			if (checkPassword() == true){
-				hideError("passwordError","errorPassRow");	
+			enableButton();
+		});		
+		$("#txtConfirm").blur(function (e) {
+			checkConfirm(true);
+			enableButton();
+		});
+		$("#txtConfirm").keyup(function (e) {
+			if(e.which != 9) {
+				if (checkConfirm(false) == true){
+					hideError("confirmError","errorConfRow");	
+				}
 			}
-		}
-		enableButton();
-	});		
-	$("#txtConfirm").blur(function (e) {
-		checkConfirm(true);
-		enableButton();
+			enableButton();
+		});			
 	});
-	$("#txtConfirm").keyup(function (e) {
-		if(e.which != 9) {
-			if (checkConfirm(false) == true){
-				hideError("confirmError","errorConfRow");	
-			}
-		}
-		enableButton();
-	});			
-});
+	//End document.ready
+
+}
 
 /* Other javascript fuctions*/
+//Part of a security check.  Checks that this screen is called correctly
+function initialCheck(){
+	if (typeof securityCheck == "function")	{
+		return true;
+	}
+	else {
+		alert("Invalid Link");
+		window.location.href = "../index.html";
+		return false;
+	}
+}// initialiseScreen does security checks
+
+
 function checkStudentId(){
 	var isValid = true;
 	if ($("#txtStudentId").val() == ""){
@@ -111,6 +132,13 @@ function validForm(){
 	    || checkConfirm(true) != true ){
 		isValid = false;
 	}
+	else if($("#txtPassword").val().length < 8){
+		$("#passwordError").val("Password must be at least 8 characters");
+		showError("passwordError","errorPassRow");
+		isValid = false;
+		
+	}
+
 	return isValid;
 }
 /* Disable or Enable the submit button*/
