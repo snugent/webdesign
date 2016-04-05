@@ -1,7 +1,14 @@
-#thCenter {
+/* 
+Name:		log.css
+Author:		Ahasan Ali
+Date:		28/04/2016
+Purpose:	Holds the main CSS for the catalogue page.
+*/
+
+.thCenter {
     text-align: center;
 }
-#thLeft {
+.thLeft {
     text-align: left;
    }
 #login {
