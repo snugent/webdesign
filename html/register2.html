@@ -8,9 +8,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/mainlayout.css">
-	<script type="text/javascript" src="jquery/jquery-2.2.2.js"></script>
-	<script type="text/javascript" src="js/register2.js"></script>
+	<script type="text/javascript" src="../js/register2.js"></script>
 </head>
 <body>
 	<form id="mainForm" name="mainForm">
@@ -30,17 +28,6 @@
 				<td colspan=3>
 					<!-- Main Details -->
 					<table id="mainTable" class="formTable">
-						<tr id="errorNameRow" class="errorRow">
-							<td class="spacer2">
-								&nbsp;
-							</td>
-							<td>
-								<input type="text" id="nameError" class="txtLabel txtError" disabled value=""/>
-							</td>
-							<td class="spacer2">
-								&nbsp;
-							</td>
-						</tr>
 						<tr>
 							<td class="spacer2">
 								&nbsp;
@@ -58,6 +45,31 @@
 							</td>
 							<td>
 								<input type="text" id="txtName"    class="txtMediumLong" placeholder="Name" />
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td>
+								<label for="rsSex" class="labelMedium">Sex</label>
+							</td>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="spacer2">
+								&nbsp;
+							</td>
+							<td class="MediumText">
+  								<input id="male" class="rsDefault" type="radio" name="rsSex" value="male" checked="checked" onclick="setRadioValue('male')" /><label>Male</label>
+  								<input id="female" type="radio" name="rsSex" value="female" onclick="setRadioValue('female')"><label>Female</label>
 							</td>
 							<td class="spacer2">
 								&nbsp;

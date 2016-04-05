@@ -6,109 +6,122 @@ Date: 23-04-16
 
 <!DOCTYPE html>
 <html>
-  <head>
- <link rel="stylesheet" type="text/css" href="mainlayout.css">
- <script type="text/javascript" src="account.js"></script>
-
-  
-    <meta charset="UTF-8">
-	<script type="text/javascript" src="../js/account.js"></script>
-    <title>My Account</title>
+  <head>  
+	 <meta charset="UTF-8">
+	 <script type="text/javascript" src="../js/account.js"></script>
+	 <title>My Account</title>
   </head>
-    <h1>Student ID <u>x15035727</u> </h1>
-  <p> <b>Items currently on loan:</b> </p>
-  
   <body>
-  <table style="width:60%">
-<style>
-th {
-    text-align: left;
-   }
-</style>
-   <th>Author</th>
-   <th>Title</th>
-   <th>Category</th>
-   <th>Return Date</th>
-    <tr>
-     <td>J.Cullen</td>
-     <td>JScript basics</td>		
-     <td>Ebook</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
-	 <td><button type="button" onclick="alert('Item Returned')">Return</button> </td>
-   </tr>
-  <tr>
-     <td>A.ALi</td>
-     <td>Web Design</td>		
-     <td>Book</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
-	 <td><button type="button" onclick="alert('Item Returned')">Return</button> </td>
-  </tr>
-  <tr>
-     <td>Jon</td>
-     <td>Jquery</td>		
-     <td>Journal</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
-	 <td><button type="button" onclick="alert('Item Returned')">Return</button> </td>
-  </tr>
-<tr>
-     <td>J.Johnson</td>
-     <td>Data</td>		
-     <td>Book</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Item Renewed')">Renew</button> </td>
-	 <td><button type="button" onclick="alert('Item returned')">Return</button> </td>
-  </tr>
-
-<table style="width:60%">
-<style>
-th {
-    text-align: left;
-   }
-</style>
-<br>
-<br>
-<br> 
-<p><b> Reserved Items:</b></p>
-   <table id="myTable">
-   <th>Author</th>
-   <th>Title</th>
-   <th>Category</th>
-   <th>Return Date</th>
-    <tr>
-     <td>J.Cullen</td>
-     <td>JScript basics</td>		
-     <td>Ebook</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button>
- </td>
-   </tr>
-  <tr>
-     <td>A.ALi</td>
-     <td>Web Design</td>		
-     <td>Book</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button> </td>
-  </tr>
-  <tr>
-     <td>Jon</td>
-     <td>Jquery</td>		
-     <td>Journal</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button> </td>
-  </tr>
-<tr>
-     <td>J.Johnson</td>
-     <td>Data</td>		
-     <td>Book</td>
-     <td>02/12/16</td>
-	 <td><button type="button" onclick="alert('Cancelled Reservation')">Cancel Reservation</button> </td>
-  </tr>
-</table>
-<p> No items currently overdue. 
-    See our <a href="http://www.w3schools.com/html/">Catalogue </a>to browse other items to add to your account</p>
+	<table>
+	  <tr>
+	  	<th>
+	  	  <h1>Account Details: Student ID x15035727</h1>
+	  </tr>
+	  <tr>
+	  	<td>
+			<table id="loanTable" class="tableAccount">
+			  <tr class="th2" >
+			  	<th colspan="6">
+			  		Items currently on loan:
+			  	</th>
+			  </tr>
+			  <tr >
+				   <th>Author</th>
+				   <th>Title</th>
+				   <th>Category</th>
+				   <th>Return Date</th>
+				   <th></th>
+				   <th></th>
+			  </tr>
+			  <tr id="r-lr-1">
+				     <td>J.Cullen</td>
+				     <td><a href="#" onclick="showBook('book1.pdf')">JScript basics</a></td>		
+				     <td>Ebook</td>
+				     <td id="td-rd-1">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="renewBook('td-rd-1')" value="Renew"></input> </td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('lr-1')" value="Return"></input> </td>
+			   </tr>
+			   <tr id="r-lr-2">
+			       <td>A.ALi</td>
+			       <td><a href="#" onclick="showBook('book2.pdf')">Web Design</a></td>		
+			       <td>EBook</td>
+			       <td id="td-rd-2">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="renewBook('td-rd-2')" value="Renew"></input> </td>
+					<td><input type="button" class="buttonMedium" onclick="hideRow('lr-2')" value="Return"></input> </td>
+			  </tr>
+			  <tr id="r-lr-3">
+			     	<td>Jon</td>
+			     	<td><a href="#" onclick="showBook('journal1.pdf')">Jquery</a></td>		
+			     	<td>EJournal</td>
+			       <td id="td-rd-3">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="renewBook('td-rd-3')" value="Renew"></input> </td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('lr-3')" value="Return"></input> </td>
+			  </tr>
+			  <tr id="r-lr-4">
+			     	<td>J.Johnson</td>
+			     	<td><a href="#" onclick="showBook('book3.pdf')">Data</a></td>		
+			     	<td>EBook</td>
+			       <td id="td-rd-4">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="renewBook('td-rd-4')" value="Renew"></input> </td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('lr-4')" value="Return"></input> </td>
+			  </tr>
+			</table>
+		  </td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+		  <td>
+			<table id="reserveTable" class="tableAccount">
+				<tr class="th2">
+					<th colspan="5">
+						Reserved Items:
+					</th>
+				</tr>
+				<tr>
+				   <th>Author</th>
+				   <th>Title</th>
+				   <th>Category</th>
+				   <th>Return Date</th>
+				   <th></th>
+				</tr>
+				<tr id="r-rr-1">
+				     <td>J.Cullen</td>
+				     <td>JScript Advanced</td>		
+				     <td>Ebook</td>
+				     <td id="td-ri-1">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('rr-1')" value="Cancel"></input> </td>
+				</tr>
+				<tr id="r-rr-2">
+				     <td>A.ALi</td>
+				     <td>Advanced Web Design</td>		
+				     <td>EBook</td>
+				     <td id="td-ri-2">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('rr-2')" value="Cancel"></input> </td>
+				</tr>
+				<tr id="r-rr-3">
+				     <td>Jon</td>
+				     <td>Advanced Jquery</td>		
+				     <td>EJournal</td>
+				     <td id="td-ri-3">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('rr-3')" value="Cancel"></input> </td>
+				</tr>
+				<tr id="r-rr-4">
+				     <td>J.Johnson</td>
+				     <td>Advanced Data Analytics</td>		
+				     <td>EBook</td>
+				     <td id="td-ri-4">02/12/2016</td>
+					 <td><input type="button" class="buttonMedium" onclick="hideRow('rr-4')" value="Cancel"></input> </td>
+				</tr>
+			</table>
+		  </td>
+	  </tr>
+	</table>
+	<p> No items currently overdue.</p>
   </body>
 </html>
 
