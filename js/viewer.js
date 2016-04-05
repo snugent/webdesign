@@ -6,7 +6,6 @@ Purpose:	Javascript for book viewer screen
 */
 //Do initial security check
 // Ignore jquery syntax if the screen doesn't pass security check
-alert("HI");
 if (initialCheck() == false){
 }
 else {
