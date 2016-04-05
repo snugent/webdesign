@@ -30,7 +30,7 @@ function initialCheck(){
 }// initialiseScreen does security checks
 
 function loadDocument(){
-	var stData = "../books/" + getParamValue("name");
+	var stData = "books/" + getParamValue("name");
 	
 	//Load the pdf document into the page
 	$("#bookViewer").parent().height("77%");
