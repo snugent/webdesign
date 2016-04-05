@@ -46,6 +46,6 @@ function setInitialDate(){
 }
 
 function showBook(ipstBookName){
-	var stURL = encodeURI("../html/viewer.html?name=" +ipstBookName);
+	var stURL = encodeURI("html/viewer.html?name=" +ipstBookName);
 	callPage(stURL,"Viewer", "2");
 }
