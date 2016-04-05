@@ -31,6 +31,7 @@ function initialCheck(){
 }// initialiseScreen does security checks
 
 function loadDocument(){
+	alert("HERE");
 	var stData = "books/" + getParamValue("name");
 	
 	//Load the pdf document into the page
