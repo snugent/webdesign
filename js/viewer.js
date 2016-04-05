@@ -6,6 +6,7 @@ Purpose:	Javascript for book viewer screen
 */
 //Do initial security check
 // Ignore jquery syntax if the screen doesn't pass security check
+alert("ere");
 if (initialCheck() == false){
 }
 else {
@@ -31,6 +32,7 @@ function initialCheck(){
 
 function loadDocument(){
 	var stData = "books/" + getParamValue("name");
+	alert(stData);
 	//Load the pdf document into the page
 	$("#bookViewer").parent().height("77%");
 	$("#bookViewer").attr('data',stData);
