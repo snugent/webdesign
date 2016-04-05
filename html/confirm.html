@@ -1,0 +1,80 @@
+<!--
+	Name:		confirm.html
+	Author:		Seamus nugent
+	Date:		25/03/2016 
+	Purpose:	Allows the user to confirm their registration details
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="../js/confirm.js"></script>
+</head>
+<body>
+	<form id="mainForm" name="mainForm">
+		<table id="headingTable" class="headingTableLarge">
+			<tr>
+				<td>
+					<input type="button"   class="headingButton buttonMedium buttonDisabled" value="Login"  disabled>
+				</td>		
+				<td>
+					<input type="button"   class="headingButton buttonMedium buttonDisabled" value="Details" disabled >
+				</td>	
+				<td>		
+					<input type="button"   class="headingButton buttonMedium" value="Confirm" disabled >
+				</td>
+			</tr>
+			<tr>
+				<td colspan=3>
+					<!-- Main Details -->
+					<table id="mainTable" class="formTableLarge">
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr >
+							<td class="spacer"></td>
+							<td>
+								<table id="tableList" class="tableList">
+									<tr>
+										<th class="th2" colspan=2>Confirm Details</th>
+									</tr>
+									<tr>								
+									<tr>
+										<td>Student Id</td>
+										<td id="td-0"></td>
+									</tr>
+									<tr>
+										<td>Name</td>
+										<td id="td-3"></td>
+									</tr>
+									<tr>
+										<td>Sex</td>
+										<td id="td-4"></td>
+									</tr>									
+									<tr>
+										<td>Email</td>
+										<td id="td-5"></td>
+									</tr>
+									<tr>
+										<td>Phone</td>
+										<td id="td-6"></td>
+									</tr>										
+								</table>
+							</td>
+							<td class="spacer"></td>							
+						</tr>
+						<tr>
+							<td colspan=3>
+								<input type="button"   id="btnBack"    class="buttonMedium"	value="< Back" onclick="goBack()" >
+								<input type="button"   id="btnConfirm" class="buttonMedium"	value="Confirm" onclick="confirmAdd();" >
+							</td>
+						</tr>
+					</table>				
+				</td>
+			</tr>			
+		</table>	
+	</form>
+</body>
+</html>
