@@ -4,11 +4,6 @@ Author:		Seamus Nugent
 Date:		25/03/2016
 Purpose:	
 */
-//Do initial security check
-// Ignore jquery syntax if the screen doesn't pass security check
-if (initialCheck() == false){
-}
-else {
 	var hasError = true;
 	/* tasks to do after the page loads*/
 	$(document).ready(function(){
@@ -58,22 +53,8 @@ else {
 	});
 	//End document.ready
 
-}
-
 /* Other javascript fuctions*/
-//Part of a security check.  Checks that this screen is called correctly
-function initialCheck(){
-	if (typeof securityCheck == "function")	{
-		return true;
-	}
-	else {
-		alert("Invalid Link");
-		window.location.href = "../index.html";
-		return false;
-	}
-}// initialiseScreen does security checks
-
-
+// Validates the student ID
 function checkStudentId(){
 	var isValid = true;
 	if ($("#txtStudentId").val() == ""){
@@ -88,6 +69,7 @@ function checkStudentId(){
 	}
 	return isValid;
 }
+// Checks the number is a number
 function checkNumber(){
 	var isValid = true;
 	if (isInt($("#txtStudentId").val()) == false){
@@ -98,6 +80,7 @@ function checkNumber(){
 	return isValid;
 }
 
+//Checks the password is not blank
 function checkPassword(){
 	var isValid = true;
 		
@@ -109,6 +92,7 @@ function checkPassword(){
 	return isValid;
 }
 
+//Checks the confirm matches the password.
 function checkConfirm(ipCheckMatch){
 	var isValid = true;
 	if ($("#txtConfirm").val() == ""){
@@ -158,6 +142,7 @@ function enableButton(){
 		$("#btnNext").removeClass("buttonDisabled");
 	}
 }
+// Goes to the next page.
 function goNext(){
 	var stURL = './html/register2.html';
 	var stOtherParams = "";

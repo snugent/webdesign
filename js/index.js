@@ -32,6 +32,7 @@ $(document).ready(function(){
 	});
 });
 
+/* Other javascript fuctions*/
 /* Disable or Enable the login button*/
 function checkTopEntry(ipUserId, ipPassword){
 	if (ipUserId == "" || ipPassword == ""){

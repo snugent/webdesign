@@ -5,12 +5,6 @@ Date:		25/03/2016
 Purpose:	
 */
 // Radio Buttons with the same name in Internet Explorer 9 can cause problems 
-//Do initial security check
-// Ignore jquery syntax if the screen doesn't pass security check
-
-if (initialCheck() == false){
-}
-else {
 	var radioValue = "male";
 	var hasError = true;
 	/* tasks to do after the page loads*/
@@ -64,21 +58,8 @@ else {
 		});			
 	});
 	// End $(document).ready
-}
 
 /* Other javascript fuctions*/
-//Part of a security check.  Checks that this screen is called correctly
-function initialCheck(){
-	if (typeof securityCheck == "function")	{
-		return true;
-	}
-	else {
-		alert("Invalid Link");
-		window.location.href = "../index.html";
-		return false;
-	}
-}// initialiseScreen does security checks
-
 // Check the name is valid
 function checkName(){
 	var isValid = true;

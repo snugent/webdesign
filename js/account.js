@@ -4,29 +4,12 @@ Author:		Jason Cullen
 Date:		03/04/2016
 Purpose:	javascript files for account .html
 */
-//Do initial security check
-// Ignore jquery syntax if the screen doesn't pass security check
-if (initialCheck() == false){
-}
-else {
-	/* tasks to do after the page loads*/
-	$(document).ready(function(){
-		setInitialDate();
-	});	
-}
 
-/* Other javascript fuctions*/
-//Part of a security check.  Checks that this screen is called correctly
-function initialCheck(){
-	if (typeof securityCheck == "function")	{
-		return true;
-	}
-	else {
-		alert("Invalid Link");
-		window.location.href = "../index.html";
-		return false;
-	}
-}// initialiseScreen does security checks
+/* tasks to do after the page loads*/
+$(document).ready(function(){
+	setInitialDate();
+});	
+
 
 //returns a book
 function hideRow(ipstName){
@@ -46,6 +29,6 @@ function setInitialDate(){
 }
 
 function showBook(ipstBookName){
-	var stURL = encodeURI("html/viewer.html?name=" +ipstBookName);
+	var stURL = "html/viewer.html?name=" +ipstBookName;
 	callPage(stURL,"Viewer", "2");
 }
