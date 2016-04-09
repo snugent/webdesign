@@ -14,12 +14,14 @@ $(document).ready(function(){
 //returns a book
 function hideRow(ipstName){
 	$("#r-" + ipstName).slideUp();
+	return;
 }
 //renews a book 
 function renewBook(ipstFieldName){
 	var initialDate = setDate(7);
 
 	$("#" + ipstFieldName).html(initialDate);
+	return;
 }
 
 //Set Initial Date on the reserved date and screen;

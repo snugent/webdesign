@@ -64,7 +64,7 @@ Purpose:
 function checkName(){
 	var isValid = true;
 	if ($("#txtName").val() == ""){
-		$("#nameError").val("Namemust have a value");
+		$("#nameError").val("Name must have a value");
 		showError("nameError","errorNameRow");
 		isValid = false;
 	}

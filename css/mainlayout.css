@@ -87,7 +87,7 @@ html, body {
 	font-family: 		Time New Roman;
 	font-size:  		12pt;
 	height:				25px;
-	width:				90px;
+	width:				95px;
 	background-color:   #1F497D; /* Dark Blue*/ 
 	color:   			#DBE5F1; /* Light Blue*/
 	border-top:			0px; 
@@ -269,7 +269,10 @@ table.headingTableLarge, td.headingTableLarge{
 	border-bottom:		1px solid black;
 	
 }
-
+.highlightRow:hover {
+	background-color: 	#9D9D9D;
+	cursor: 			pointer;
+}
 /* Specific elements with ID specified*/
 #Container {
 	margin:				0px, 0px, 0px, 0px;
